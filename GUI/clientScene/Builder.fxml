@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.5297482837528604, 0.7620137299771167" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.clientScene.ClientMainSceneController">
+   <items>
+      <SplitPane dividerPositions="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="462.0" prefWidth="630.0">
+               <children>
+                  <TabPane layoutX="16.0" layoutY="33.0" prefHeight="430.0" prefWidth="425.0">
+                     <tabs>
+                        <Tab text="Public">
+                           <content>
+                              <ScrollPane>
+                                 <content>
+                                    <TextArea fx:id="chat" editable="false" prefHeight="389.0" prefWidth="425.0" />
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Channel">
+                          <content>
+                              <ScrollPane prefHeight="389.0" prefWidth="420.0" />
+                          </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                  <Label alignment="CENTER" layoutX="169.0" layoutY="-3.0" prefHeight="35.0" prefWidth="123.0" text="CHAT" textAlignment="CENTER" textFill="#e86cc3">
+                     <font>
+                        <Font name="Bauhaus 93" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="113.0" prefWidth="432.0">
+               <children>
+                  <TextArea fx:id="textMSG" layoutX="16.0" layoutY="11.0" prefHeight="96.0" prefWidth="369.0" />
+                  <Button fx:id="btnSend" layoutX="388.0" layoutY="10.0" mnemonicParsing="false" onAction="#MSG" prefHeight="96.0" prefWidth="68.0" text="Send" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.8003442340791739" orientation="VERTICAL" prefHeight="581.0" prefWidth="240.0">
+        <items>
+            <AnchorPane>
+               <children>
+                  <ScrollPane prefHeight="462.0" prefWidth="202.0">
+                     <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="191.0">
+                           <children>
+                              <ListView layoutX="6.0" layoutY="34.0" prefHeight="304.0" prefWidth="187.0" AnchorPane.bottomAnchor="118.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="34.0" />
+                              <Label layoutX="47.0" layoutY="6.0" text="CHANNELS" textFill="#e86cc3">
+                                 <font>
+                                    <Font name="Bauhaus 93" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="52.0" layoutY="338.0" text="Choose Channel" textFill="#e86cc3">
+                                 <font>
+                                    <Font name="Bauhaus 93" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btn01" layoutX="14.0" layoutY="352.0" mnemonicParsing="false" onAction="#pressedbtn01" text="Channel 01" />
+                              <Button fx:id="btn02" layoutX="96.0" layoutY="352.0" mnemonicParsing="false" onAction="#pressedbtn02" text="Channel 02" />
+                              <Button fx:id="btn03" layoutX="14.0" layoutY="382.0" mnemonicParsing="false" onAction="#pressedbtn03" text="Channel 03" />
+                              <Button fx:id="btn04" layoutX="96.0" layoutY="382.0" mnemonicParsing="false" onAction="#pressedbtn04" text="Channel 04" />
+                              <Button fx:id="btn05" layoutX="52.0" layoutY="407.0" mnemonicParsing="false" onAction="#pressedbtn05" text="Channel 05" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="89.0" prefWidth="203.0">
+               <children>
+                  <GridPane alignment="CENTER" layoutX="11.0" layoutY="-5.0" prefHeight="96.0" prefWidth="154.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                          <buttons>
+                            <Button fx:id="btnCall" mnemonicParsing="false" onAction="#Call" text="Call" />
+                          </buttons>
+                        </ButtonBar>
+                        <ButtonBar prefHeight="43.0" prefWidth="85.0" GridPane.columnIndex="1">
+                          <buttons>
+                            <Button fx:id="btnDisconnect" alignment="CENTER" mnemonicParsing="false" onAction="#Disconnect" text="Disconnect" />
+                          </buttons>
+                        </ButtonBar>
+                        <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <buttons>
+                            <Button fx:id="btnVN" mnemonicParsing="false" onAction="#VN" text="Voice Note" />
+                           </buttons>
+                        </ButtonBar>
+                        <ButtonBar prefHeight="47.0" prefWidth="91.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <buttons>
+                            <Button mnemonicParsing="false" text="Logout" />
+                           </buttons>
+                        </ButtonBar>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.21514629948364888" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ImageView fitHeight="96.0" fitWidth="213.0" layoutX="-4.0">
+                     <image>
+                        <Image url="@logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="4.0" layoutY="94.0" prefHeight="8.0" prefWidth="197.0" text="USERS" textAlignment="CENTER" textFill="#e86cc3">
+                     <font>
+                        <Font name="Bauhaus 93" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ListView fx:id="userList" prefHeight="453.0" prefWidth="205.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </items>
+</SplitPane>
